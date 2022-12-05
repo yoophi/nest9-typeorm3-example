@@ -1,7 +1,8 @@
 import 'reflect-metadata';
+import { User } from '../users/users.entity';
 import { DataSource, DataSourceOptions } from 'typeorm';
 
-const dataSourceOptions: DataSourceOptions = {
+export const dataSourceOptions: DataSourceOptions = {
   type: 'postgres',
   host: 'localhost',
   port: 5432,
@@ -10,7 +11,7 @@ const dataSourceOptions: DataSourceOptions = {
   database: 'test',
   synchronize: true,
   logging: false,
-  entities: [],
+  entities: [User],
   migrations: [],
   subscribers: [],
 };
