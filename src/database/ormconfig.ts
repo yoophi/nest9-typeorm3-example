@@ -9,10 +9,10 @@ export const dataSourceOptions: DataSourceOptions = {
   username: 'test',
   password: 'test',
   database: 'test',
-  synchronize: true,
+  synchronize: false,
   logging: false,
   entities: [User],
-  migrations: [],
+  migrations: [__dirname + '/../migrations/*{.js,.ts}'],
   subscribers: [],
 };
 
